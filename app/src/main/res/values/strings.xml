@@ -9,7 +9,8 @@
     <string name="button1">FAVOURITE QUOTATIONS</string>
     <string name="button2">SETTINGS</string>
     <string name="button3">ABOUT</string>
-    <string name="etiqueta">Quotation Shake by</string>
+    <string name="etiqueta">Quotation Shake by\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\n
+        Adrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
     <string name="etiqueta1">Name that
         identifies the user</string>
     <string name="etiqueta2">Insert your name</string>
