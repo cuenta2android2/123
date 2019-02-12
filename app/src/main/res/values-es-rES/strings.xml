@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppPracticas</string>
+    <string name="author">Info del Autor</string>
+    <string name="button2">AJUSTES</string>
+    <string name="button3">SOBRE NOSOTROS</string>
+    <string name="button1">CITAS FAVORITAS</string>
+    <string name="button">OBTENER CITAS</string>
+    <string name="nombreVentana5">Conócenos</string>
+    <string name="nombreVentana4">Ajustes</string>
+    <string name="nombreVentana3">Citas Favoritas</string>
+    <string name="nombreVentana2">Citas Aleatorias</string>
+    <string name="nombreVentana1">QuotationShake</string>
+    <string name="etiqueta">Quotation Shake por\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\nAdrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
+    <string name="etiqueta1">Nombre que identifica al usuario</string>
+    <string name="etiqueta2">Inserta tu nombre</string>
+    <string name="etiqueta5">OBTENER</string>
+    <string name="etiqueta6">ENVIAR</string>
+    <string name="etiqueta3">Las citas se recivirán en el idioma seleccionado</string>
+    <string name="etiqueta4">Las solicitudes web se realizarán utilizando el método HTTP seleccionado</string>
+</resources>

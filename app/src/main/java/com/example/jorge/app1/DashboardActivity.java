@@ -13,8 +13,8 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
     }
 
-    protected void cambiarVentana(View v) {
-        switch( v.getId() ) {
+    protected void changeWindow(View view) {
+        switch( view.getId() ) {
             case R.id.about:
                 Intent intent = new Intent(this, AboutActivity.class);
                 startActivity(intent);

@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">AppPracticas</string>
-    <string name="nombreVentana1">QuotationShake</string>
+    <string name="app_name" translatable="false">AppPracticas</string>
+    <string name="nombreVentana1" translatable="false">QuotationShake</string>
     <string name="nombreVentana2">Random quotations</string>
     <string name="nombreVentana3">Favourite quotations</string>
     <string name="nombreVentana4">Settings</string>
@@ -9,8 +9,7 @@
     <string name="button1">FAVOURITE QUOTATIONS</string>
     <string name="button2">SETTINGS</string>
     <string name="button3">ABOUT</string>
-    <string name="etiqueta">Quotation Shake by\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\n
-        Adrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
+    <string name="etiqueta">Quotation Shake by\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\nAdrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
     <string name="etiqueta1">Name that
         identifies the user</string>
     <string name="etiqueta2">Insert your name</string>
@@ -20,5 +19,7 @@
     <string name="etiqueta5">GET</string>
     <string name="etiqueta6">POST</string>
     <string name="author">Author info</string>
+    <string name="Adri" translatable="false">Adri</string>
+    <string name="Jorge" translatable="false">Jorge</string>
 
 </resources>
