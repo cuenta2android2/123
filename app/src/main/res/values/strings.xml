@@ -18,6 +18,9 @@
     <string name="etiqueta4">Web requests will be performed using the selected HTTP method</string>
     <string name="etiqueta5">GET</string>
     <string name="etiqueta6">POST</string>
+    <string name="etiqueta7">“Hello %1s!\nPress Refresh to get a new quotation”</string>
+    <string name="etiqueta8">This is a sample autor</string>
+
     <string name="author">Author info</string>
     <string name="Adri" translatable="false">Adri</string>
     <string name="Jorge" translatable="false">Jorge</string>

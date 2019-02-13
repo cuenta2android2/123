@@ -18,4 +18,6 @@
     <string name="etiqueta6">ENVIAR</string>
     <string name="etiqueta3">Las citas se recivirán en el idioma seleccionado</string>
     <string name="etiqueta4">Las solicitudes web se realizarán utilizando el método HTTP seleccionado</string>
+    <string name="etiqueta7">“Hello %1s!\nPress Refresh to get a new quotation”</string>
+    <string name="etiqueta8">This is a sample autor</string>
 </resources>
