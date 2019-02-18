@@ -5,35 +5,55 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/nombreVentana1"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--Dashboard activity-->
         <activity
-            android:name=".DashboardActivity"
-            android:label="@string/nombreVentana1">
+            android:name="com.example.jorge.app1.Activities.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--About activity-->
         <activity
-            android:name=".AboutActivity"
-            android:label="@string/nombreVentana5">
+            android:name="com.example.jorge.app1.Activities.AboutActivity"
+            android:label="@string/activity_about_title"
+            android:parentActivityName="com.example.jorge.app1.Activities.DashboardActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jorge.app1.Activities.DashboardActivity"></meta-data>
         </activity>
+
+        <!--Settings activity-->
         <activity
-            android:name=".SettingsActivity"
-            android:label="@string/nombreVentana4"
-            android:windowSoftInputMode = "stateAlwaysHidden">
+            android:name="com.example.jorge.app1.Activities.SettingsActivity"
+            android:label="@string/activity_settings_title"
+            android:windowSoftInputMode = "stateAlwaysHidden"
+            android:parentActivityName="com.example.jorge.app1.Activities.DashboardActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jorge.app1.Activities.DashboardActivity"></meta-data>
         </activity>
+
+        <!--Favourite activity-->
         <activity
-            android:name=".FavouriteActivity"
-            android:label="@string/nombreVentana3">
+            android:name="com.example.jorge.app1.Activities.FavouriteActivity"
+            android:label="@string/activity_favourite_title"
+            android:parentActivityName="com.example.jorge.app1.Activities.DashboardActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jorge.app1.Activities.DashboardActivity"></meta-data>
         </activity>
+
+        <!--Quotation activity-->
         <activity
-            android:name=".QuotationActivity"
-            android:label="@string/nombreVentana2">
+            android:name="com.example.jorge.app1.Activities.QuotationActivity"
+            android:label="@string/activity_quotations_title"
+            android:parentActivityName="com.example.jorge.app1.Activities.DashboardActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jorge.app1.Activities.DashboardActivity"></meta-data>
         </activity>
     </application>
 

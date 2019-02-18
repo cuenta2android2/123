@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AppPracticas</string>
     <string name="author">Info del Autor</string>
-    <string name="button2">AJUSTES</string>
-    <string name="button3">SOBRE NOSOTROS</string>
-    <string name="button1">CITAS FAVORITAS</string>
-    <string name="button">OBTENER CITAS</string>
-    <string name="nombreVentana5">Conócenos</string>
-    <string name="nombreVentana4">Ajustes</string>
-    <string name="nombreVentana3">Citas Favoritas</string>
-    <string name="nombreVentana2">Citas Aleatorias</string>
-    <string name="nombreVentana1">QuotationShake</string>
-    <string name="etiqueta">Quotation Shake por\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\nAdrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
-    <string name="etiqueta1">Nombre que identifica al usuario</string>
-    <string name="etiqueta2">Inserta tu nombre</string>
-    <string name="etiqueta5">OBTENER</string>
-    <string name="etiqueta6">ENVIAR</string>
-    <string name="etiqueta3">Las citas se recivirán en el idioma seleccionado</string>
-    <string name="etiqueta4">Las solicitudes web se realizarán utilizando el método HTTP seleccionado</string>
+    <string name="SETTINGS">AJUSTES</string>
+    <string name="ABOUT">CONOCENOS</string>
+    <string name="FAVOURITE_QUOTATIONS">CITAS FAVORITAS</string>
+    <string name="GET_QUOTATIONS">OBTENER CITAS</string>
+    <string name="activity_about_title">Conócenos</string>
+    <string name="activity_settings_title">Ajustes</string>
+    <string name="activity_favourite_title">Citas Favoritas</string>
+    <string name="activity_quotations_title">Citas Aleatorias</string>
+
+    <string name="about">Quotation Shake por\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\nAdrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
+    <string name="etiqueta_username">Nombre que identifica al usuario</string>
+    <string name="insert_username">Inserta tu nombre</string>
+    <string name="etiqueta_language">Las citas se recivirán en el idioma seleccionado</string>
+    <string name="etiqueta_web">Las solicitudes web se realizarán utilizando el método HTTP seleccionado</string>
     <string name="etiqueta7">“Hello %1s!\nPress Refresh to get a new quotation”</string>
     <string name="etiqueta8">This is a sample autor</string>
+    <string name="english">Inglés</string>
+    <string name="russian">Ruso</string>
+    <string name="action_delete">Borrar</string>
+    <string name="action_clear_all">Borrar todo</string>
+    <string name="action_refresh">Recargar</string>
+    <string name="action_add">Añadir</string>
+    <string name="nameless">Sin Nombre Uno</string>
+    <string name="greetings">Hola %1s! Pulsa recargar para obtener una nueva cita!</string>
+    <string name="sample_quotation">Esta es una cita de muestra</string>
+    <string name="sample_author">Este es un autor de muestra</string>
 </resources>

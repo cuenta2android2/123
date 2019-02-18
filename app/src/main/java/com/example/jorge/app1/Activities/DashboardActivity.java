@@ -1,9 +1,11 @@
-package com.example.jorge.app1;
+package com.example.jorge.app1.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.jorge.app1.R;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -13,26 +15,28 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
     }
 
-    protected void changeWindow(View view) {
-        switch( view.getId() ) {
+    protected void changeWindow(View v) {
+
+        Intent intent = null;
+
+        switch( v.getId() ) {
             case R.id.about:
-                Intent intent = new Intent(this, AboutActivity.class);
-                startActivity(intent);
+                intent = new Intent(this, AboutActivity.class);
                 break;
 
             case R.id.settings:
-                Intent intent2 = new Intent(this, SettingsActivity.class);
-                startActivity(intent2);
+                intent = new Intent(this, SettingsActivity.class);
                 break;
             case R.id.getq:
-                Intent intent3 = new Intent(this, QuotationActivity.class);
-                startActivity(intent3);
+                intent = new Intent(this, QuotationActivity.class);
                 break;
             case R.id.favouriteq:
-                Intent intent4 = new Intent(this, FavouriteActivity.class);
-                startActivity(intent4);
+                intent = new Intent(this, FavouriteActivity.class);
                 break;
+        }
 
+        if (intent != null) {
+            startActivity(intent);
         }
     }
 }
