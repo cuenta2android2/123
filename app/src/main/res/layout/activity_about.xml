@@ -26,7 +26,7 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/jorge" />
+            app:srcCompat="@android:drawable/ic_menu_rotate" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -36,7 +36,7 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/adrian" />
+            app:srcCompat="@android:drawable/ic_menu_rotate" />
 
         <TextView
             android:id="@+id/textViewAbout"
