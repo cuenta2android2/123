@@ -27,4 +27,8 @@
     <string name="greetings">Hola %1s! Pulsa recargar para obtener una nueva cita!</string>
     <string name="sample_quotation">Esta es una cita de muestra</string>
     <string name="sample_author">Este es un autor de muestra</string>
+    <string name="anonymous">No se puede mostrar información de autores anónimos</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="deleteDialog">¿Estás seguro de borrar esta cita?</string>
 </resources>
