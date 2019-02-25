@@ -10,50 +10,54 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--Dashboard activity-->
-        <activity
-            android:name="com.example.jorge.app1.Activities.DashboardActivity">
+        <!-- Dashboard activity -->
+        <activity android:name=".Activities.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!--About activity-->
+        <!-- About activity -->
         <activity
-            android:name="com.example.jorge.app1.Activities.AboutActivity"
+            android:name=".Activities.AboutActivity"
             android:label="@string/activity_about_title"
-            android:parentActivityName="com.example.jorge.app1.Activities.DashboardActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jorge.app1.Activities.DashboardActivity"></meta-data>
+            android:parentActivityName=".Activities.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jorge.app1.Activities.DashboardActivity" />
         </activity>
 
-        <!--Settings activity-->
+        <!-- Settings activity -->
         <activity
-            android:name="com.example.jorge.app1.Activities.SettingsActivity"
-            android:label="@string/activity_settings_title"
-            android:windowSoftInputMode = "stateAlwaysHidden"
-            android:parentActivityName="com.example.jorge.app1.Activities.DashboardActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jorge.app1.Activities.DashboardActivity"></meta-data>
+            android:name=".Activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".Activities.DashboardActivity"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jorge.app1.Activities.DashboardActivity" />
         </activity>
 
-        <!--Favourite activity-->
+        <!-- Favourite activity -->
         <activity
-            android:name="com.example.jorge.app1.Activities.FavouriteActivity"
+            android:name=".Activities.FavouriteActivity"
             android:label="@string/activity_favourite_title"
-            android:parentActivityName="com.example.jorge.app1.Activities.DashboardActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jorge.app1.Activities.DashboardActivity"></meta-data>
+            android:parentActivityName=".Activities.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jorge.app1.Activities.DashboardActivity" />
         </activity>
 
-        <!--Quotation activity-->
+        <!-- Quotation activity -->
         <activity
-            android:name="com.example.jorge.app1.Activities.QuotationActivity"
+            android:name=".Activities.QuotationActivity"
             android:label="@string/activity_quotations_title"
-            android:parentActivityName="com.example.jorge.app1.Activities.DashboardActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jorge.app1.Activities.DashboardActivity"></meta-data>
+            android:parentActivityName=".Activities.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jorge.app1.Activities.DashboardActivity" />
         </activity>
     </application>
 

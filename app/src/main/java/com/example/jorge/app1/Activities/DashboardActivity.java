@@ -23,7 +23,6 @@ public class DashboardActivity extends AppCompatActivity {
             case R.id.about:
                 intent = new Intent(this, AboutActivity.class);
                 break;
-
             case R.id.settings:
                 intent = new Intent(this, SettingsActivity.class);
                 break;

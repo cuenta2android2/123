@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import com.example.jorge.app1.Databases.QuotationSqlHelper;
 import com.example.jorge.app1.R;
-import com.example.jorge.app1.Adapters.ListAdapter;
 import com.example.jorge.app1.Pojo.Quotation;
 
 import java.io.UnsupportedEncodingException;
@@ -151,79 +150,6 @@ public class FavouriteActivity extends AppCompatActivity {
             }
         });
     }*/
-
-    public List<Quotation> getMockQuotations()
-    {
-        List<Quotation> result = new ArrayList<>();
-        Quotation item;
-
-        item = new Quotation();
-        item.setQuote("Think Big");
-        item.setAuthor("IMAX");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Push button publishing");
-        item.setAuthor("Blogger");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Beauty outside. Beast inside");
-        item.setAuthor("Mac Pro");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("American by birth. Rebel by choice");
-        item.setAuthor("Harley Davidson");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Don't be evil");
-        item.setAuthor("Google");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("If you want to impress someone, put him on your Black list");
-        item.setAuthor("Johnnie Walker");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Live in your world. Play in ours");
-        item.setAuthor("Playstation");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Impossible is nothing");
-        item.setAuthor("Adidas");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Solutions for a small planet");
-        item.setAuthor("IBM");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("I'm lovin it");
-        item.setAuthor("McDonalds");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Just do it");
-        item.setAuthor("Nike");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Melts in your mouth, not in your hands");
-        item.setAuthor("M&M");
-        result.add(item);
-
-        item = new Quotation();
-        item.setQuote("Because you're worth it");
-        item.setAuthor("Loreal");
-        result.add(item);
-
-        return result;
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

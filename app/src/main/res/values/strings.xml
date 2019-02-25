@@ -1,53 +1,40 @@
 <resources>
     <string name="app_name" translatable="false">QuotationShake</string>
 
-    <string name="activity_quotations_title">Random quotations</string>
-    <string name="activity_favourite_title">Favourite quotations</string>
-    <string name="activity_settings_title">Settings</string>
-    <string name="activity_about_title">About</string>
-
     <string name="GET_QUOTATIONS">GET QUOTATIONS</string>
     <string name="FAVOURITE_QUOTATIONS">FAVOURITE QUOTATIONS</string>
     <string name="SETTINGS">SETTINGS</string>
     <string name="ABOUT">ABOUT</string>
 
-    <string name="about">Quotation Shake by\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\nAdrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
+    <string name="activity_quotations_title">Random quotations</string>
+    <string name="nameless">Nameless One</string>
+    <string name="greetings">Hello %1s! Press refresh to get a new quotation!</string>
+    <string name="connection_not_available">Internet connection is not available. Please try later</string>
+    <string name="action_add">Add</string>
+    <string name="sample_quotation">Sample quote %1$d</string>
+    <string name="sample_author">Sample autor %1$d</string>
 
-    <string name="etiqueta_username">Name that identifies the user</string>
-    <string name="insert_username">Insert your name</string>
-    <string name="etiqueta_language">Quotations will be received in the selected
-        language</string>
-    <string name="etiqueta_web">Web requests will be performed using the selected HTTP method</string>
-    <string name="get" translatable="false">GET</string>
-    <string name="post" translatable="false">POST</string>
-
-    <string name="etiqueta7">“Hello %1s!\nPress Refresh to get a new quotation”</string>
-    <string name="etiqueta8">This is a sample author</string>
-
+    <string name="activity_favourite_title">Favourite quotations</string>
     <string name="action_delete">Delete</string>
     <string name="action_clear_all">Clear all</string>
     <string name="action_refresh">Refresh</string>
-    <string name="action_add">Add</string>
-
-    <string name="nameless">Nameless One</string>
-    <string name="greetings">Hello %1s! Press refresh to get a new quotation!</string>
-    <string name="sample_quotation">This is a sample quotation: %1d</string>
-    <string name="sample_author">This is a sample author: %1d</string>
-
-    <string name="anonymous">Cannot show information for anonymous authors</string>
-    <string name="connection_not_available">No se dispone de conexión a Internet. Por favor, inténtalo más tarde</string>
     <string name="confirmation_delete">Are you sure you want to delete this quotation?</string>
     <string name="confirmation_clear">Are you sure you want to delete ALL the contents from the database?</string>
+    <string name="anonymous">Cannot show information for anonymous authors</string>
 
+    <string name="activity_about_title">About</string>
+    <string name="about">Quotation Shake by\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\nAdrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
+
+    <string name="title_activity_settings">Settings</string>
+    <string name="preference_name_summary">Name that identifies the user</string>
+    <string name="preference_name_hint">Insert your name</string>
+    <string name="preference_quotation_language_summary">Quotations will be received in the selected language</string>
+    <string name="preference_http_method_summary">Web requests will be performed using the selected HTTP method</string>
     <string name="english">English</string>
     <string name="russian">Russian</string>
 
     <string name="deleteDialog">Are you sure that you want to delete this quotation?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-
-    <string name="author">Author info</string>
-    <string name="Adri" translatable="false">Adri</string>
-    <string name="Jorge" translatable="false">Jorge</string>
 
 </resources>

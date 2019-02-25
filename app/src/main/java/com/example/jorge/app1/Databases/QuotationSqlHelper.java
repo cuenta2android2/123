@@ -78,6 +78,5 @@ public class QuotationSqlHelper  extends SQLiteOpenHelper {
         database.delete("QuotationsTable", "quote=?", new String[]{text});
         database.close();
     }
-
 }
 

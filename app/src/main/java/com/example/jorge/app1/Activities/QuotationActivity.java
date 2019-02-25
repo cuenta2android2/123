@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.jorge.app1.Databases.QuotationSqlHelper;
 import com.example.jorge.app1.R;
 
 
@@ -91,8 +92,8 @@ public class QuotationActivity extends AppCompatActivity {
 
             case R.id.action_add:
 
-                //QuotationSqlHelper.getInstance(this).addQuotation(
-                        //tvQuote.getText().toString(), tvAuthor.getText().toString());
+                QuotationSqlHelper.getInstance(this).addQuotation(
+                        tvQuote.getText().toString(), tvAuthor.getText().toString());
 
                 addQuotation = false;
 
@@ -101,5 +102,19 @@ public class QuotationActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        fakeNumber = PreferenceManager.getDefaultSharedPreferences(this).getInt("fakeNumber", 0);
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
+        editor.putInt("fakeNumber", fakeNumber);
+        editor.apply();
+        super.onPause();
     }
 }
