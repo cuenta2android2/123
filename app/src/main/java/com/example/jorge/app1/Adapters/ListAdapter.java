@@ -1,4 +1,4 @@
-package com.example.jorge.app1.adapters;
+package com.example.jorge.app1.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

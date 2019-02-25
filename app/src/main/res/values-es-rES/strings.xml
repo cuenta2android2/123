@@ -31,4 +31,7 @@
     <string name="yes">Si</string>
     <string name="no">No</string>
     <string name="deleteDialog">¿Estás seguro de borrar esta cita?</string>
+    <string name="connection_not_available">No se dispone de conexión a Internet. Por favor, inténtalo más tarde</string>
+    <string name="confirmation_delete">¿Está seguro de eliminar esta cita?</string>
+    <string name="confirmation_clear">¿Está seguro de eliminar TODAS las citas?</string>
 </resources>

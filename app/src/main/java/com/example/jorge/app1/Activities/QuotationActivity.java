@@ -1,5 +1,8 @@
 package com.example.jorge.app1.Activities;
 
+import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,35 +25,81 @@ public class QuotationActivity extends AppCompatActivity {
     TextView tvQuote;
     TextView tvAuthor;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.quotation, menu);
-        return true;
-    }
+    int fakeNumber = 0;
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Toast.makeText(
-                this, item.getTitle(), Toast.LENGTH_SHORT).show();
-        return true;
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quotation);
 
-        tvQuote = (findViewById(R.id.tvQuotation));
-        tvAuthor = (findViewById(R.id.tvAutor));
+        progressBar = (ProgressBar) findViewById(R.id.pbQuotation);
+        tvQuote = ((TextView) findViewById(R.id.tvQuotation));
+        tvAuthor = ((TextView) findViewById(R.id.tvAuthor));
 
-        tvQuote.setText(
-                String.format(getResources().getString(R.string.greetings),
-                        getResources().getString(R.string.nameless)));
+        if (savedInstanceState == null) {
+
+            SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+            String name = sharedPrefs.getString("prefs_name", getResources().getString(R.string.nameless));
+            tvQuote.setText(String.format(getResources().getString(R.string.greetings), name));
+        }
+
+        else {
+
+            tvQuote.setText(savedInstanceState.getString("text"));
+            tvAuthor.setText(savedInstanceState.getString("author"));
+            addQuotation = savedInstanceState.getBoolean("add");
+        }
     }
 
-    public void refresh(View v) {
-        tvQuote.setText(R.string.sample_quotation);
-        tvAuthor.setText(R.string.sample_author);
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("text", tvQuote.getText().toString());
+        outState.putString("author", tvAuthor.getText().toString());
+        outState.putBoolean("add", addQuotation);
+        super.onSaveInstanceState(outState);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.quotation, menu);
+        menu.findItem(R.id.action_refresh).setVisible(newQuotation);
+        menu.findItem(R.id.action_add).setVisible(newQuotation && addQuotation);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @SuppressLint("StringFormatInvalid")
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+
+            case R.id.action_refresh:
+
+                tvQuote.setText(String.format(getResources().getString(R.string.sample_quotation), fakeNumber));
+                tvAuthor.setText(String.format(getResources().getString(R.string.sample_author), fakeNumber));
+                fakeNumber++;
+
+                newQuotation = true;
+                addQuotation = true;
+
+                supportInvalidateOptionsMenu();
+
+                return true;
+
+            case R.id.action_add:
+
+                //QuotationSqlHelper.getInstance(this).addQuotation(
+                        //tvQuote.getText().toString(), tvAuthor.getText().toString());
+
+                addQuotation = false;
+
+                supportInvalidateOptionsMenu();
+
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
