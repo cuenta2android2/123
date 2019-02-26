@@ -9,4 +9,9 @@
         <item>GET</item>
         <item>POST</item>
     </string-array>
+
+    <string-array name="databases_method_array">
+        <item>Room</item>
+        <item>SQLiteOpenHelper</item>
+    </string-array>
 </resources>

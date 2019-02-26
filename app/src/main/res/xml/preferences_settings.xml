@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:hint="@string/preference_name_hint"
+        android:key="prefs_name"
+        android:summary="@string/preference_name_summary"
+        android:title="User name" />
+    <PreferenceCategory android:title="Web service">
+        <ListPreference
+            android:defaultValue="English"
+            android:entries="@array/languages_array"
+            android:entryValues="@array/languages_array"
+            android:key="prefs_quotation_language"
+            android:summary="@string/preference_quotation_language_summary"
+            android:title="Quotation language" />
+        <ListPreference
+            android:defaultValue="GET"
+            android:entries="@array/http_method_array"
+            android:entryValues="@array/http_method_array"
+            android:key="prefs_http_method"
+            android:summary="@string/preference_http_method_summary"
+            android:title="HTTP request method" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Database">
+        <ListPreference
+            android:defaultValue="SQLiteOpenHelper"
+            android:entries="@array/databases_method_array"
+            android:entryValues="@array/databases_method_array"
+            android:key="prefs_database"
+            android:summary="@string/preference_database_method_summary"
+            android:title="Database access method" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

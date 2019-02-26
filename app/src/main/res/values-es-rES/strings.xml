@@ -9,8 +9,6 @@
     <string name="activity_quotations_title">Citas Aleatorias</string>
 
     <string name="about">Quotation Shake por\n\nJorge Vicente Agustín\n\njorviag@inf.upv.es\n\nAdrián Gilabert de Vargas\n\nadgide@inf.upv.es\n\nDADM 2019</string>
-    <string name="english">Inglés</string>
-    <string name="russian">Ruso</string>
     <string name="action_delete">Borrar</string>
     <string name="action_clear_all">Borrar todo</string>
     <string name="action_refresh">Recargar</string>
@@ -31,4 +29,8 @@
     <string name="preference_name_hint">Inserta tu nombre</string>
     <string name="preference_quotation_language_summary">Las citas se recibirán en el idioma seleccionado</string>
     <string name="preference_http_method_summary">Las solicitudes web se realizarán utilizando el método HTTP seleccionado</string>
+    <string name="preference_database_method_summary">Se accederá a la base de datos siguiendo el método seleccionado</string>
+    <string name="preference_quotation_language">Idioma citas</string>
+    <string name="preference_http_method">Método solicitud HTTP</string>
+    <string name="preference_database_method">Método de acceso a la base de datos</string>
 </resources>
