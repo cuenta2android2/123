@@ -113,44 +113,7 @@ public class FavouriteActivity extends AppCompatActivity {
         }
 
     }
-
-/*    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-        final ListAdapter listAdapter = new ListAdapter(this,R.layout.activity_favourite,getMockQuotations());
-        final ListView listViewFavQuotes = findViewById(R.id.listViewFavQuotes);
-        listViewFavQuotes.setAdapter(listAdapter);
-        listViewFavQuotes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String authorName = ((TextView)view.findViewById(R.id.tvAuthor)).getText().toString();
-                getAuthorInfo(authorName);
-            }
-        });
-        listViewFavQuotes.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                builder.setMessage(R.string.deleteDialog);
-                builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        listAdapter.remove(listAdapter.getItem(position));
-                    }
-                });
-                builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.create().show();
-
-                return false;
-            }
-        });
-    }*/
-
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.favourite, menu);
