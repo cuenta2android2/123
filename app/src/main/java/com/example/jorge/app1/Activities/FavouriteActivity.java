@@ -37,7 +37,7 @@ public class FavouriteActivity extends AppCompatActivity {
     ListView favouriteListView;
     String dbpref;
     boolean clearAllQuotations;
-
+    Context context;
     int selectedItem;
 
 
@@ -49,7 +49,7 @@ public class FavouriteActivity extends AppCompatActivity {
         dbpref = sharedPrefs.getString("prefs_database", "");
         FavouriteQuotationAsyncClass task = new FavouriteQuotationAsyncClass(this);
         task.execute(PreferenceManager.getDefaultSharedPreferences(this).getString("prefs_database", "Room") == "Room");
-
+context=this;
     }
 
     public void showQuotations(List<Quotation> list) {
@@ -101,9 +101,11 @@ public class FavouriteActivity extends AppCompatActivity {
 
                 selectedItem = position;
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setMessage(R.string.confirmation_delete);
                 builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    String text=hashMapList.get(selectedItem).get("quote");
+                    Quotation q=lista.get(selectedItem);
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (dbpref == "Room") {
@@ -111,7 +113,7 @@ public class FavouriteActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     // Include here the code to access the database
-                                    RoomDatabaseHelper.getInstance(getApplicationContext()).dao().deleteQuotation(lista.get(selectedItem));
+                                    RoomDatabaseHelper.getInstance(getApplicationContext()).dao().deleteQuotation(q);
                                 }
                             }).start();
                         } else {
@@ -119,8 +121,7 @@ public class FavouriteActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     // Include here the code to access the database
-                                    QuotationSqlHelper.getInstance(getApplicationContext()).deleteQuotation(
-                                            hashMapList.get(selectedItem).get("quote"));
+                                    QuotationSqlHelper.getInstance(getApplicationContext()).deleteQuotation(text);
                                 }
                             }).start();
                         }

@@ -59,14 +59,12 @@ public class QuotationAsyncClass extends AsyncTask<Void, Void, Quotation> {
                 writer.close();
                 if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-// Retrieve and process the response
-                    Gson quotation = new GsonBuilder().create();
-                    q=quotation.fromJson(reader,Quotation.class);
+                   // Gson quotation = new Gson();
+                    //q=quotation.fromJson(reader,Quotation.class);
                    // q.setAuthor("Hay conexion"+reader.toString());
                     reader.close();
 
                 }
-// Get response
                 connection.disconnect();
 
             } catch (IOException e) {
@@ -91,15 +89,10 @@ public class QuotationAsyncClass extends AsyncTask<Void, Void, Quotation> {
                 connection.setDoInput(true);
                 if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-// Retrieve and process the response
-                    Gson quotation = new GsonBuilder().create();
-                    q = quotation.fromJson(reader, Quotation.class);
-                    //q.setAuthor("Hay conexion");
+                   // Gson quotation = new Gson();
+                    //q = quotation.fromJson(reader, Quotation.class);
                     reader.close();
                 }
-// Get response
-                else q.setQuote("no hay conexion");
-
                 connection.disconnect();
 
             } catch (IOException e) {
@@ -113,6 +106,15 @@ public class QuotationAsyncClass extends AsyncTask<Void, Void, Quotation> {
     @Override
     protected void onPostExecute(Quotation qu) {
 
+        //Este es un codigo para probar la aplicacion ya que no conseguimos obtener la cit aleatoria del serivor
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(reference.get().getApplicationContext());
+        SharedPreferences.Editor editor=PreferenceManager.getDefaultSharedPreferences(reference.get().getApplicationContext()).edit();
+        int cont= sharedPrefs.getInt("fakeNumber", 0);
+        qu.setQuote("Cita de prueba: "+cont);
+        editor.putInt("fakeNumber",cont+1);
+        editor.apply();
+
+        //Esta linea de codigo seria la uncica necesaria en caso de obtener correctamente la cita aleatoria
         reference.get().updateWebService(qu);
     }
 
