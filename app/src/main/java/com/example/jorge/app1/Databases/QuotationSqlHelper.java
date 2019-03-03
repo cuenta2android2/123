@@ -6,8 +6,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.jorge.app1.Pojo.Quotation;
+
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 public class QuotationSqlHelper  extends SQLiteOpenHelper {
 
@@ -35,10 +41,11 @@ public class QuotationSqlHelper  extends SQLiteOpenHelper {
 
     }
 
-    public ArrayList<HashMap<String, String>> getQuotations() {
+    public List<Quotation> getQuotations() {
 
         ArrayList<HashMap<String, String>> result = new ArrayList<>();
         HashMap<String, String> item;
+        List<Quotation> list=new ArrayList<Quotation>();
 
         SQLiteDatabase database = getReadableDatabase();
         Cursor cursor = database.query(
@@ -48,11 +55,12 @@ public class QuotationSqlHelper  extends SQLiteOpenHelper {
             item.put("quote", cursor.getString(0));
             item.put("author", cursor.getString(1));
             result.add(item);
+            list.add(new Quotation(cursor.getString(0), cursor.getString(1)));
         }
         cursor.close();
         database.close();
 
-        return result;
+        return list;
     }
 
     public void addQuotation(String text, String author) {

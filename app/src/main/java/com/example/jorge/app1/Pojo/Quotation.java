@@ -1,11 +1,32 @@
 package com.example.jorge.app1.Pojo;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Index;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.*;
+
+@Entity(tableName = "QuotationsTable",indices = {@Index(value = {"quote"}, unique = true)})
 public class Quotation {
-    String quoteText;
-    String quoteAuthor;
-    String senderName;
-    String senderLink;
-    String quoteLink;
+    @PrimaryKey(autoGenerate=true)
+    public int id;
+
+    @ColumnInfo(name="quote")
+    public String quoteText;
+
+
+    @ColumnInfo(name="author")
+    @NonNull
+    public String quoteAuthor;
+    public  String senderName;
+    public String senderLink;
+    public String quoteLink;
+
+    public Quotation(){}
+    public Quotation(String quoteText,String quoteAuthor){
+        this.quoteAuthor=quoteAuthor;
+        this.quoteText=quoteText;
+    }
 
     public String getQuote() {
         return quoteText;

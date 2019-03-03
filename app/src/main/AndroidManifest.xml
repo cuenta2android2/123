@@ -59,6 +59,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jorge.app1.Activities.DashboardActivity" />
         </activity>
-    </application>
 
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
